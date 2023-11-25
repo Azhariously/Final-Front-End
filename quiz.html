@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link rel="icon" type="image/x-icon" href="IT-con.ico">
+    <title>IT-con - Quiz</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header" class="d-flex align-items-center header-inner">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+
+            <div id="logo" class="me-auto">
+                <h1><a href="index.html" class="scrollto">IT-con</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="quiz.html">Quiz</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <a class="buy-tickets scrollto" href="index.html">Buy Tickets</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <h1 style="text-align: center; ">IT Quiz</h1>
+
+            <div class="question" id="question1">
+                <p>1. What does HTML stand for?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="Hypertext Markup Language"> Hypertext Markup Language</li>
+                    <li><input type="radio" name="q1" value="Hyper Transfer Markup Language"> Hyper Transfer Markup
+                        Language</li>
+                    <li><input type="radio" name="q1" value="High-level Text Markup Language"> High-level Text Markup
+                        Language</li>
+                </ul>
+            </div>
+
+            <div class="question" id="question2">
+                <p>2. What is the purpose of CSS?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="Control System Standards"> Control System Standards</li>
+                    <li><input type="radio" name="q2" value="Cascading Style Sheets"> Cascading Style Sheets</li>
+                    <li><input type="radio" name="q2" value="Computer Style Sheets"> Computer Style Sheets</li>
+                </ul>
+            </div>
+
+            <div class="question" id="question3">
+                <p>3. Which programming language is known for its versatility and flexibility in web development?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="Python"> Python</li>
+                    <li><input type="radio" name="q3" value="Java"> Java</li>
+                    <li><input type="radio" name="q3" value="JavaScript"> JavaScript</li>
+                </ul>
+            </div>
+
+            <button class="btn btn-check-answer" onclick="showAnswers()">Check Answers</button>
+ 
+
+
+            <div id="result"></div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+      
+              <div class="col-lg-3 col-md-6 footer-info">
+                
+                <p>For any inquiries or assistance, feel free to reach out to our event organizers.Don't miss this unique opportunity to immerse yourself in the world of IT over three days and connect with like-minded individuals. We look forward to seeing you at "A Day of an IT Specialist"!</p>
+              </div>
+      
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="quiz.html">Quiz</a></li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-3 col-md-6 footer-links">
+              </div>
+      
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h4>Contact Us</h4>
+                <p>
+                  <strong>Phone:</strong> +8 747 588 1927<br>
+                  <strong>Email:</strong> kaldybekovaazar13@gmail.com<br>
+                </p>
+      
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong>IT-con</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="https://www.instagram.com/qzhqr10usly/">QZHQR10USLY</a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      function showAnswers() {
+          const correctAnswers = {
+              q1: "Hypertext Markup Language",
+              q2: "Cascading Style Sheets",
+              q3: "JavaScript"
+          };
+  
+          let score = 0;
+          let userAnswers = {};
+  
+          for (let i = 1; i <= 3; i++) {
+              const question = `q${i}`;
+              userAnswers[question] = getSelectedValue(question);
+  
+              if (userAnswers[question] === correctAnswers[question]) {
+                  score++;
+              }
+          }
+  
+          const resultContainer = document.getElementById('result');
+          resultContainer.innerHTML = `<p>Your score is: ${score} out of 3</p>`;
+  
+          for (const question in correctAnswers) {
+              const correctAnswer = correctAnswers[question];
+              resultContainer.innerHTML += `<p>${question}: ${correctAnswer}</p>`;
+          }
+  
+          let discount = 0;
+          if (score === 1) {
+              discount = 15;
+          } else if (score === 2) {
+              discount = 30;
+          } else if (score === 3) {
+              discount = 45;
+          }
+  
+          resultContainer.innerHTML += `<p>Congratulations! You've earned a ${discount}% discount for your ticket!</p>`;
+      }
+  
+      function getSelectedValue(questionName) {
+          const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+          return selectedOption ? selectedOption.value : null;
+      }
+  </script>
+
+</body>
+
+</html>

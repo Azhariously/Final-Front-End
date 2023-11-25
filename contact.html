@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link rel="icon" type="image/x-icon" href="IT-con.ico">
+  <title>Contact</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="d-flex align-items-center header-inner">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+        <h1><a href="index.html" class="scrollto">IT-con</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+          <li><a class="nav-link scrollto" href="quiz.html">Quiz</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <a class="buy-tickets scrollto" href="index.html">Buy Tickets</a>
+
+    </div>
+  </header>
+
+<main>
+  <section id="contact" class="section-bg">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header"><br>
+        <h2>Contact Us</h2>
+        <p>Reach out to our event organizers</p>
+      </div>
+
+      <div class="row contact-info">
+
+        <div class="col-md-4">
+          <div class="contact-address">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Address</h3>
+            <address>Astana Hub, Astana, KZ</address>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-phone">
+            <i class="fas fa-phone"></i>
+            <h3>Phone Number</h3>
+            <p><a href="tel:+7 747 588 19 27">+7 747 588 19 27</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-email">
+            <i class="fas fa-envelope"></i> 
+            <h3>Email</h3>
+            <p><a href="mailto:kaldybekovaazar13@gmail.com">kaldybekovaazar13@gmail.com</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form">
+        <form action="" method="post" role="form" >
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group col-md-6 mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="text-center"><button type="submit"  id="sendButton">Send Message</button></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          
+          <p>For any inquiries or assistance, feel free to reach out to our event organizers.Don't miss this unique opportunity to immerse yourself in the world of IT over three days and connect with like-minded individuals. We look forward to seeing you at "A Day of an IT Specialist"!</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="quiz.html">Quiz</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Phone:</strong> +8 747 588 1927<br>
+            <strong>Email:</strong> kaldybekovaazar13@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>IT-con</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://www.instagram.com/qzhqr10usly/">QZHQR10USLY</a>
+    </div>
+  </div>
+</footer>
+<audio id="audio" src="check.wav"></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var sendButton = document.getElementById("sendButton");
+    sendButton.addEventListener("click", function() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    });
+  });
+</script>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
